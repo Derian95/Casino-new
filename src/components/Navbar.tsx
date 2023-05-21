@@ -1,11 +1,9 @@
-import { useUiStore } from "../store/uiStore"
 
 import { HamburguerUi } from "./ui/HamburguerUi"
 
 export const Navbar = () => {
 	// const { scrollYProgress } = useScroll()
 	// const initial = useTransform(scrollYProgress, (x) => x +0.9 )
-	const { showMenu } = useUiStore()
 
 	return (
 		<nav className='w-full h-16 bg-white fixed z-20 '>
