@@ -1,8 +1,7 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
 
 export const Navbar = () => {
-	const { scrollYProgress } = useScroll()
-	const initial = useTransform(scrollYProgress, (x) => x +0.9 )
+	// const { scrollYProgress } = useScroll()
+	// const initial = useTransform(scrollYProgress, (x) => x +0.9 )
 
 	return (
 		<nav className='w-full h-16 bg-white fixed z-20 '>
