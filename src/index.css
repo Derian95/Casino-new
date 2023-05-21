@@ -12,9 +12,8 @@
 
 .image-decoration {
 	position: relative;
-  
-	width: 400px;
-	height: 400px;
+	width: 85%;
+	height: 85%;
 }
 .image-decoration::after {
 	content: '';
@@ -27,6 +26,20 @@
 	z-index: 1;
 	transition: all 0.6s ease;
 }
+
+@media (max-width: 767px) {
+	.image-decoration{
+		width: 60%;
+		height: 60%;
+	}
+  }
+
+  @media (max-width: 567px) {
+	.image-decoration{
+		width: 80%;
+		height: 80%;
+	}
+  }
 .image-decoration img {
 	right: 2%;
 	bottom: 2%;
@@ -41,4 +54,46 @@
 .image-decoration:hover.image-decoration img {
 	transform: translate(1%, 1%);
 }
+
+
+
+.react-slideshow-wrapper.slide,.images-wrap{
+	height: 100%;
+	position: relative;
+
+}
+.images-wrap div{
+	height: 100%;
+}
+
+.sliderClass{
+	height: 400px !important;
+}
+
+
+
+
+  .indicators {
+	cursor: pointer;
+	text-align: center;
+	margin: 0;
+	
+  }
+  .react-slideshow-container+ul.indicators{
+	cursor: pointer;
+	text-align: center;
+	margin: 0;
+	transform: translateY(-15px);
+	color: white;
+  }
+  .react-slideshow-container+ul.indicators .each-slideshow-indicator:before{
+	background: white !important;
+  }
+
+
+
+
+
+
+
 

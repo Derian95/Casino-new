@@ -13,7 +13,7 @@ export const PrincipalLayout: FC<Props> = ({ children }) => {
 			<header>
 				<Navbar />
 			</header>
-			<main  >
+			<main  className='overflow-x-hidden'>
 				{children}
 			</main>
             <footer>
