@@ -16,7 +16,7 @@ export const Home = () => {
 			ref={containerRef}
 			id='home'>
 			<motion.video
-				style={{ scale, transition: 'all .5s' }}
+				style={{ scale }}
 				autoPlay
 				loop
 				muted
@@ -24,9 +24,9 @@ export const Home = () => {
 				<source src={video} type='video/mp4' />
 			</motion.video>
 
-			<div className='h-full w-full aboslute flex justify-start items-center  bg-gradient-to-r from-slate-900 to-transparent pl-28'>
+			<div className='h-full w-full aboslute flex justify-start items-center  bg-gradient-to-r from-slate-900 to-transparent pl-2 md:pl-28'>
 				<div className='py-5 flex flex-col gap-y-8'>
-					<h1 className='text-8xl font-black text-white '>DAMASCO</h1>
+					<h1 className='text-4xl sm:text-6xl md:text-8xl  font-black text-white '>DAMASCO</h1>
 					<ReactTypingEffect
 						text={['Diversion', 'Entretenimiento', 'Chanozuelas']}
                         className='text-white text-3xl font-semibold'
