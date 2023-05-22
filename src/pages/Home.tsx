@@ -39,9 +39,7 @@ export const Home = () => {
 					<p className='text-[#F8F6F5] font-light'>
 						Av. Siempre viva Sprinfild 124
 					</p>
-					<button className='bg-white p-2 w-44 px-5 rounded-md flex-grow'>
-						Empezar
-					</button>
+					<a href="#about" className='bg-white p-2 w-44 px-5 rounded-md flex flex-grow items-center justify-center'><span>Empezar</span></a>
 				</div>
 			</div>
 		</div>

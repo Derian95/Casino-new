@@ -1,12 +1,9 @@
-import { FC } from 'react'
-import { Navbar } from '../components/Navbar'
+import { Navbar } from '../components/common/Navbar'
+import { Footer } from '../components/common/Footer'
 
-import { Footer } from '../components/Footer'
+import {Outlet} from 'react-router-dom'
 
-interface Props {
-	children: React.ReactNode
-}
-export const PrincipalLayout: FC<Props> = ({ children }) => {
+export const PrincipalLayout = () => {
 	
 	return (
 		<div >
@@ -14,7 +11,7 @@ export const PrincipalLayout: FC<Props> = ({ children }) => {
 				<Navbar />
 			</header>
 			<main  className='overflow-x-hidden'>
-				{children}
+				<Outlet/>
 			</main>
             <footer>
             <Footer />

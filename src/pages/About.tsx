@@ -4,7 +4,7 @@ import pattern from '../assets/pattern.svg'
 
 export const About = () => {
 	return (
-		<div className='w-screen h-auto flex justify-center pt-16 bg-white'>
+		<div className='w-screen h-auto flex justify-center pt-16 bg-white' id='about'>
 			<div className='max-w-5xl h-auto w-full grid grid-cols-1 gap-14 px-5 sm:px-20 md:px-10 lg:px-0'>
 				<div className='h-auto grid grid-cols-1 md:grid-cols-2 gap-4  '>
 					<motion.div

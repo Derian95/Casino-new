@@ -8,10 +8,6 @@ export const ListAdvertisemen = () => {
         <Card/>
         <Card/>
         <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
     </div>
   )
 }
