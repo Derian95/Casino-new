@@ -1,0 +1,6 @@
+export * from './principal/About'
+export * from './principal/Advertisement'
+export * from './principal/Contact'
+export * from './principal/Home'
+export * from './principal/Promotion'
+export * from './announcement/DetailAnnouncement'

@@ -1,5 +1,4 @@
 import { NavBarMobile } from './components/ui/NavBarMobile'
-import { About, Home, Advertisement, Contact } from './pages'
 
 function App() {
 
@@ -7,10 +6,7 @@ function App() {
     <>
       {/* <Loader/> */}
       <NavBarMobile/>
-      <Home/>
-      <About/>
-      <Advertisement/>
-      <Contact/>
+     
     </>
   )
 }

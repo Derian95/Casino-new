@@ -1,4 +1,2 @@
-export * from './Home'
-export * from './About'
-export * from './Contact'
-export * from './Advertisement'
+export * from './Announcement'
+export * from './Principal'

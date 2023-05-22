@@ -19,12 +19,12 @@ export const Contact = () => {
 
 	return (
 		<div
-			className='min-w-screen min-h-screen bg-white flex justify-center items-center py-20'
+			className='min-w-screen min-h-screen bg-white flex justify-center items-center py-20 PX-5'
 			id='contact'>
 			<div className='max-w-5xl h-auto w-full '>
 				<p className='text-3xl mb-7 text-center'>Ponganse en contacto</p>
 				<div className='w-full  '>
-					<div className='grid grid-cols-1 sm:grid-cols-2 gap-14 px-5 md:px-20 '>
+					<div className='grid grid-cols-1 sm:grid-cols-2 gap-14  '>
 						<form action='' className=' w-full flex flex-col gap-4'>
 							<div>
 								<label>Nombre</label>
@@ -58,8 +58,9 @@ export const Contact = () => {
 								/>
 							</div>
 						</form>
-					</div>
 					<div id='map' className='bg-red-800'></div>
+
+					</div>
 				</div>
 			</div>
 		</div>

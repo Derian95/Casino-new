@@ -21,7 +21,7 @@
 	width: 100%;
 	left: 3%;
 	top: 3%;
-	border: solid 5px black;
+	border: solid 5px #0A47C9;
 	position: absolute;
 	z-index: 1;
 	transition: all 0.6s ease;

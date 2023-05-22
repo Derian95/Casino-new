@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import { PrincipalLayout } from "../layout";
-import App from "../App";
 import { Detail } from "../pages/Detail";
-import { Advertisement, Contact } from "../pages";
+import { Principal } from "../pages/Principal";
+import { Announcement } from "../pages/Announcement";
+import { Contact } from "../views";
 
 
 
@@ -15,7 +16,7 @@ export const route = createBrowserRouter([
 		children: [
 			{
 				path: '/',
-				element: <App />,
+				element: <Principal />,
 			},
 			
 			{
@@ -24,7 +25,7 @@ export const route = createBrowserRouter([
 			},
             {
 				path: '/anuncios',
-				element: <Advertisement />,
+				element: <Announcement />,
 			},
 			{
 				path: '/contacto',
