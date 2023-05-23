@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import { PrincipalLayout } from "../layout";
-import { Detail } from "../pages/Detail";
 import { Principal } from "../pages/Principal";
 import { Announcement } from "../pages/Announcement";
 import { Contact, DetailAnnouncement } from "../views";
