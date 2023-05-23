@@ -39,7 +39,7 @@ export const About = () => {
 						}}
 						viewport={{ once: true }}
 						className=' flex flex-col justify-center items-center md:items-start gap-y-10 '>
-						<p className='text-3xl font-bold text-[#0A47C9] text-center '><span className='text-[#333333]'>Sobre</span> nosotros</p>
+						<p className='text-3xl font-bold text-[#0A47C9] '><span className='text-[#333333]'>Sobre</span> nosotros</p>
 
 						<motion.p className='text-[#3e4a63] font-normal'>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. In
@@ -60,7 +60,7 @@ export const About = () => {
 							stiffness: 152,
 						}}
 						viewport={{ once: true }}
-						className=' flex flex-col justify-center items-start gap-y-10 '>
+						className=' flex flex-col justify-center items-center md:items-start gap-y-10 '>
 						
 						<p className='text-3xl font-bold text-[#0A47C9]'><span className='text-[#333333]'>Nuestra</span> misión</p>
 
@@ -78,6 +78,7 @@ export const About = () => {
 							eos. Inventore, fugiat laboriosam.
 						</p>
 					</motion.div>
+					<div className='flex justify-center items-center'>
 					<motion.div				
 						initial={{ opacity: 0, translateX: 100 }}
 						whileInView={{ opacity: 1, translateX: 0 }}
@@ -87,17 +88,19 @@ export const About = () => {
 							stiffness: 152,
 						}}
 						viewport={{ once: true }}
-						className=' h-[350px] md:h-[500px]  relative w-full '>
+						className=' h-[350px] md:h-[500px]  relative w-3/4 md:w-full'>
 						<img src={imagen4} alt='' className='w-4/5 absolute' />
 					
 						<img
 							src={imagen2}
 							alt=''
-							className='w-4/5 h-3/6 absolute bottom-20 right-0 z-[1]'
+							className='w-4/5 h-4/6 bottom-0 absolute md:bottom-20 right-0 z-[1] md:h-3/6'
 						/>
 						<img src={pattern} alt='' className='absolute -left-10 bottom-10 ' />
 						<img src={pattern} alt='' className='absolute -right-0 top-0 ' />
 					</motion.div>
+					</div>
+					
 				</div>
 			</div>
 		</div>

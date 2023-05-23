@@ -1,7 +1,7 @@
 
 
 import { useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Slider } from '../../components/detail/Slider'
 
 
@@ -10,6 +10,7 @@ import { Slider } from '../../components/detail/Slider'
 export const DetailAnnouncement = () => {
 	
     const { pathname } = useLocation()
+	const navigate = useNavigate();
 
 	
     useEffect(() => {
@@ -22,12 +23,10 @@ export const DetailAnnouncement = () => {
     return (
 		<div className='w-screen h-auto flex justify-center pt-36 bg-white px-5'>
 			<div className='max-w-5xl h-auto w-full '>
-				<Link to={'/'}>
-					<div>
+					<div onClick={()=>navigate(-1)}>
 						{' '}
-						<span className='text-2xl'>{'<  '}</span> Regresar
+						<span className='text-2xl' >{'<  '}</span> Regresars
 					</div>
-				</Link>
 
 				<p className='text-xs mb-6 text-[#0A47C9] font-semibold m-auto max-w-fit'>19 Dic - 27 Ene</p>
 				<p className='text-3xl text-center font-bold text-[#333333]'>Promocion de bebidas</p>
