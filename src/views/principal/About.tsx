@@ -18,7 +18,6 @@ export const About = () => {
 							duration: 2.5,
 							type: 'spring',
 							stiffness: 152,
-							delay: 1,
 						}}
 						viewport={{ once: true }}
 						className='flex justify-center items-center md:justify-start order-last md:order-first'>
@@ -35,10 +34,9 @@ export const About = () => {
 						initial={{ opacity: 0, translateX: 100 }}
 						whileInView={{ opacity: 1, translateX: 0 }}
 						transition={{
-							duration: 1.5,
+							duration: 2.5,
 							type: 'spring',
 							stiffness: 152,
-							delay: 1,
 						}}
 						viewport={{ once: true }}
 						className=' flex flex-col justify-center items-start gap-y-10 '>
@@ -61,7 +59,6 @@ export const About = () => {
 							duration: 2.5,
 							type: 'spring',
 							stiffness: 152,
-							delay: 1,
 						}}
 						viewport={{ once: true }}
 						className=' flex flex-col justify-center items-start gap-y-10 '>
@@ -82,14 +79,13 @@ export const About = () => {
 							eos. Inventore, fugiat laboriosam.
 						</p>
 					</motion.div>
-					<motion.div
+					<motion.div				
 						initial={{ opacity: 0, translateX: 100 }}
 						whileInView={{ opacity: 1, translateX: 0 }}
 						transition={{
-							duration: 1.5,
+							duration: 2.5,
 							type: 'spring',
 							stiffness: 152,
-							delay: 1,
 						}}
 						viewport={{ once: true }}
 						className=' h-[350px] md:h-[500px]  relative w-full '>

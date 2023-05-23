@@ -1,8 +1,8 @@
 
 export const Announcement = () => {
   return (
-    <div>
-        
+    <div className="min-h-screen">
+        DDD
     </div>
   )
 }

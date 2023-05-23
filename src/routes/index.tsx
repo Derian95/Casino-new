@@ -3,7 +3,7 @@ import { PrincipalLayout } from "../layout";
 import { Detail } from "../pages/Detail";
 import { Principal } from "../pages/Principal";
 import { Announcement } from "../pages/Announcement";
-import { Contact } from "../views";
+import { Contact, DetailAnnouncement } from "../views";
 
 
 
@@ -21,7 +21,7 @@ export const route = createBrowserRouter([
 			
 			{
 				path: '/anuncio-detalle',
-				element: <Detail />,
+				element: <DetailAnnouncement />,
 			},
             {
 				path: '/anuncios',

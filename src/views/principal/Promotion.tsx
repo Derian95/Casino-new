@@ -3,11 +3,9 @@ import { ListAdvertisemen } from '../../components/advertisements/ListAdvertisem
 
 export const Promotion = () => {
 	return (
-		<div
-			className='min-w-screen min-h-screen bg-white flex flex-col gap-10 justify-center items-center px-5'
-			id='anun'>
-			<div className='max-w-5xl'>
-				<p className='text-3xl mb-12 text-center'>Promociones</p>
+		<div className='min-w-screen min-h-screen bg-white flex flex-col gap-10 justify-center items-center  ' id='anun'>
+			<div className='max-w-5xl  w-full px-5'>
+			<p className='text-3xl font-bold text-[#333333] text-center mb-20'><span className='text-[#0A47C9]'>Promociones</span> destacadas</p>
 
 				<ListAdvertisemen />
 			</div>

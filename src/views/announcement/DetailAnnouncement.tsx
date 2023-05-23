@@ -20,20 +20,24 @@ export const DetailAnnouncement = () => {
 
 
     return (
-		<div className='w-screen h-auto flex justify-center pt-36 bg-white'>
-			<div className='max-w-5xl h-auto w-full grid grid-cols-1 '>
+		<div className='w-screen h-auto flex justify-center pt-36 bg-white px-5'>
+			<div className='max-w-5xl h-auto w-full '>
 				<Link to={'/'}>
 					<div>
 						{' '}
 						<span className='text-2xl'>{'<  '}</span> Regresar
 					</div>
 				</Link>
-				<p className='text-3xl my-6 '>Detalle del evento</p>
+
+				<p className='text-xs mb-6 text-[#0A47C9] font-semibold m-auto max-w-fit'>19 Dic - 27 Ene</p>
+				<p className='text-3xl text-center font-bold text-[#333333]'>Promocion de bebidas</p>
+				<p className='m-auto my-6 text-[10px] text-center font-semibold bg-[#BDD2FF] text-[#0A47C9] max-w-fit px-2 py-1'>EVENTO</p>
+				
 				<div className='  '>
 					<Slider />
 				</div>
-				<div className='min-h-[50vh]  px-4'>
-					<p>
+				<div className='min-h-[50vh]  '>
+					<p className='text-[#3e4a63] font-normal'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab a, esse
 						ad sed reprehenderit voluptatum minus, quis molestias doloribus
 						tempora doloremque, accusantium repellendus. Pariatur totam voluptas

@@ -7,10 +7,13 @@ export const Principal = () => {
 		<>
 			<NavBarMobile />
 			<Home />
+			<div className="bg-white">
 			<About />
 			<Advertisement />
             <Promotion/>
-			<Contact />
+			<Contact/>
+			</div>
+			
 		</>
 	)
 }
