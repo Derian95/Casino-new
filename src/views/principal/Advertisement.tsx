@@ -10,7 +10,7 @@ export const Advertisement = () => {
   }, [pathname]);
 
 	return (
-		<div className='min-w-screen min-h-screen mb-40 md:mb-0 bg-white flex flex-col gap-10 justify-center items-center  ' id='anun'>
+		<div className='min-w-screen h-auto py-20  mb-36 md:mb-0 bg-white flex flex-col gap-10 justify-center items-center  ' id='anun'>
 			<div className='max-w-5xl  w-full px-5'>
 			<p className='text-3xl font-bold text-[#333333] text-center mb-20'><span className='text-[#0A47C9]'>Ofertas</span> destacadas</p>
 				<ListAdvertisemen />

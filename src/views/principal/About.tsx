@@ -39,8 +39,8 @@ export const About = () => {
 							stiffness: 152,
 						}}
 						viewport={{ once: true }}
-						className=' flex flex-col justify-center items-start gap-y-10 '>
-						<p className='text-3xl font-bold text-[#0A47C9]'><span className='text-[#333333]'>Sobre</span> nosotros</p>
+						className=' flex flex-col justify-center items-center md:items-start gap-y-10 '>
+						<p className='text-3xl font-bold text-[#0A47C9] text-center '><span className='text-[#333333]'>Sobre</span> nosotros</p>
 
 						<motion.p className='text-[#3e4a63] font-normal'>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. In
