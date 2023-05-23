@@ -20,6 +20,7 @@ export const Home = () => {
 				autoPlay
 				loop
 				muted
+				playsInline
 				className='h-screen w-screen object-cover  -z-10 absolute'>
 				<source src={video} type='video/mp4' />
 			</motion.video>
