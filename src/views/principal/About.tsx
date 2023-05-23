@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import pattern from '../../assets/pattern.svg'
 import imagen1 from '../../assets/about1.jpg'
 import imagen2 from '../../assets/imagen2.webp'
-import imagen3 from '../../assets/imagen3.jpg'
 import imagen4 from '../../assets/imagen4.jpg'
 
 export const About = () => {
@@ -89,12 +88,8 @@ export const About = () => {
 						}}
 						viewport={{ once: true }}
 						className=' h-[350px] md:h-[500px]  relative w-full '>
-						<img src={imagen4} alt='' className='w-2/4 absolute' />
-						<img
-							src={imagen3}
-							alt=''
-							className='w-3/6 absolute z-10 right-11 top-10'
-						/>
+						<img src={imagen4} alt='' className='w-4/5 absolute' />
+					
 						<img
 							src={imagen2}
 							alt=''
