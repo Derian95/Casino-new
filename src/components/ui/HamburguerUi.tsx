@@ -7,6 +7,6 @@ export const HamburguerUi = () => {
 
 
   return (
-    <Hamburger toggled={showMenu} toggle={changeStateMenu} />
+    <Hamburger toggled={showMenu} toggle={changeStateMenu} color='#20407B'/>
       )
 };

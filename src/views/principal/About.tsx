@@ -1,107 +1,38 @@
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
+import imgAbout from '../../assets/aboutImg.svg'
+import '../Views.css'
 
-import pattern from '../../assets/pattern.svg'
-import imagen1 from '../../assets/about1.jpg'
-import imagen2 from '../../assets/imagen2.webp'
-import imagen4 from '../../assets/imagen4.jpg'
+const variants:Variants={
+	initial:{opacity:0, translateX:-100},
+	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:3, type:'tween'}}
+
+}
+const variants2:Variants={
+	initial:{opacity:0, translateX:100},
+	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:3, type:'tween'}}
+
+}
 
 export const About = () => {
 	return (
-		<div className='w-screen h-auto flex justify-center pt-16 bg-white' id='about'>
-			<div className='max-w-5xl h-auto w-full grid grid-cols-1 px-5'>
-				<div className='h-auto grid grid-cols-1 md:grid-cols-2 gap-4  '>
-					<motion.div
-						initial={{ opacity: 0, translateX: -100 }}
-						whileInView={{ opacity: 1, translateX: 0 }}
-						transition={{
-							duration: 2.5,
-							type: 'spring',
-							stiffness: 152,
-						}}
-						viewport={{ once: true }}
-						className='flex justify-center items-center md:justify-start order-last md:order-first'>
-						<div className='image-decoration'>
-							<img
-								src={imagen1}
-								alt=''
-								className='h-full w-full relative z-[2] '
-							/>
-						</div>
-					</motion.div>
-
-					<motion.div
-						initial={{ opacity: 0, translateX: 100 }}
-						whileInView={{ opacity: 1, translateX: 0 }}
-						transition={{
-							duration: 2.5,
-							type: 'spring',
-							stiffness: 152,
-						}}
-						viewport={{ once: true }}
-						className=' flex flex-col justify-center items-center md:items-start gap-y-10 '>
-						<p className='text-3xl font-bold text-[#0A47C9] '><span className='text-[#333333]'>Sobre</span> nosotros</p>
-
-						<motion.p className='text-[#3e4a63] font-normal'>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-							laudantium ea distinctio debitis quis, nesciunt pariatur alias
-							maiores et. Incidunt illo ipsam soluta deserunt voluptas tempora
-							eos. Inventore, fugiat laboriosam.
-						</motion.p>
-					</motion.div>
-				</div>
-
-				<div className='h-auto grid grid-cols-1 md:grid-cols-2 gap-14	 '>
-					<motion.div
-						initial={{ opacity: 0, translateX: -100 }}
-						whileInView={{ opacity: 1, translateX: 0 }}
-						transition={{
-							duration: 2.5,
-							type: 'spring',
-							stiffness: 152,
-						}}
-						viewport={{ once: true }}
-						className=' flex flex-col justify-center items-center md:items-start gap-y-10 '>
-						
-						<p className='text-3xl font-bold text-[#0A47C9]'><span className='text-[#333333]'>Nuestra</span> misión</p>
-
-						<p className='text-[#3e4a63] font-normal'>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-							laudantium ea distinctio debitis quis, nesciunt pariatur alias
-							maiores et. Incidunt illo ipsam soluta deserunt voluptas tempora
-							eos. Inventore, fugiat laboriosam.
-						</p>
-						<p className='text-3xl font-bold text-[#0A47C9]'><span className='text-[#333333]'>Nuestra</span> visión</p>
-						<p className='text-[#3e4a63] font-normal'>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-							laudantium ea distinctio debitis quis, nesciunt pariatur alias
-							maiores et. Incidunt illo ipsam soluta deserunt voluptas tempora
-							eos. Inventore, fugiat laboriosam.
-						</p>
-					</motion.div>
-					<div className='flex justify-center items-center'>
-					<motion.div				
-						initial={{ opacity: 0, translateX: 100 }}
-						whileInView={{ opacity: 1, translateX: 0 }}
-						transition={{
-							duration: 2.5,
-							type: 'spring',
-							stiffness: 152,
-						}}
-						viewport={{ once: true }}
-						className=' h-[350px] md:h-[500px]  relative w-3/4 md:w-full'>
-						<img src={imagen4} alt='' className='w-4/5 absolute' />
-					
-						<img
-							src={imagen2}
-							alt=''
-							className='w-4/5 h-4/6 bottom-0 absolute md:bottom-20 right-0 z-[1] md:h-3/6'
-						/>
-						<img src={pattern} alt='' className='absolute -left-10 bottom-10 ' />
-						<img src={pattern} alt='' className='absolute -right-0 top-0 ' />
-					</motion.div>
+		<div
+			className='w-screen h-auto flex flex-col justify-center items-center py-28 bg-[#F5FAFF]'
+			id='about'>
+				<p className='text-[#094998] font-medium text-sm mb-20'>Sobre nosotros</p>
+			<div className='max-w-7xl h-auto w-full grid grid-cols-1 md:grid-cols-2 px-5 gap-32'>
+				<motion.div variants={variants} initial="initial" whileInView="show" className='aboutImage h-full w-full aboutImage flex justify-center items-center order-2 '>
+					<img src={imgAbout} alt='' className=' w-4/5 h-[95%] object-cover'/>
+				</motion.div>
+				<motion.div variants={variants2} initial="initial" whileInView="show" className='flex flex-col gap-10 md:order-2'>
+					<div>
+						<p className='font-bold text-[#313131] text-[44px] mb-5 '>Nuestra misión</p>
+						<p className='text-[#1F589E] font-normal text-base leading-7'>Ser la empresa de entretenimiento más sólida y organizada del país.</p>
 					</div>
-					
-				</div>
+					<div>
+						<p className='font-bold text-[#313131] text-[44px] mb-5 '>Nuestra visión</p>
+						<p className='text-[#1F589E] line-clamp- font-normal leading-7 text-base'>Que los clientes logren la mejor experiencia de entretenimiento. Brindar a nuestros colaboradores un medio para su desarrollo y bienestar. Incrementar el valor de la Corporación.</p>
+					</div>
+				</motion.div>
 			</div>
 		</div>
 	)

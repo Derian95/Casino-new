@@ -1,6 +1,10 @@
 // import { useEffect, useState } from "react"
 import { About, Advertisement, Contact, Home } from "../views"
+import { Club } from "../views/principal/Club"
+import { Employed } from "../views/principal/Employed"
+import { Hall } from "../views/principal/Hall"
 import { Promotion } from "../views/principal/Promotion"
+import { Services } from "../views/principal/Services"
 
 export const Principal = () => {
 
@@ -24,9 +28,13 @@ export const Principal = () => {
            
 			<div className="bg-white">
 			<About />
-			<Advertisement />
+			<Hall/>
+            <Club/>
+            <Employed/>
+            <Services/>
+            <Advertisement />
             <Promotion/>
-			<Contact/>
+			{/* <Contact/> */}
 			</div>
 			
 		</>
