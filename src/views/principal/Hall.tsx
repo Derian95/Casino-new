@@ -3,9 +3,18 @@ import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import image from '../../assets/logoDamasco.svg'
 import '../Views.css'
+import { Variants, motion } from 'framer-motion'
+
+
+const variants:Variants={
+	initial:{opacity:0, translateY:100},
+	show:{opacity:1, translateY:0,transition:{ease:'easeOut', duration:2, type:'tween'}}
+
+}
+
 export const Hall = () => {
 	const [isPaused, setIsPaused] = useState(false)
-	const [transition, setTransition] = useState(1900)
+	const [transition, setTransition] = useState(2900)
 
 	const handleMouseEnter = () => {
 		setIsPaused(true)
@@ -24,7 +33,7 @@ export const Hall = () => {
 			<p className='text-[#094998] font-medium text-sm mb-5'>Salas</p>
             <p className='font-extrabold text-[#313131] text-4xl mb-20'>Nuestras salas</p>
 			
-            <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='w-full'>
+            <motion.div  variants={variants} initial="initial" whileInView="show" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='w-full'>
 				<Slide slidesToShow={5} duration={0} arrows={false} transitionDuration={transition} indicators={true} autoplay={!isPaused} cssClass='halls' >
 					<div  className=' w-50 mx-5 '>
 						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
@@ -43,7 +52,7 @@ export const Hall = () => {
 						<img src={image} alt='Imagen 10' />
 					</div>
 				</Slide>
-			</div>
+			</motion.div>
 		</div>
 	)
 }

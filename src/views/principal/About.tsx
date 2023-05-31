@@ -4,12 +4,12 @@ import '../Views.css'
 
 const variants:Variants={
 	initial:{opacity:0, translateX:-100},
-	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:3, type:'tween'}}
+	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:2, type:'tween'}}
 
 }
 const variants2:Variants={
 	initial:{opacity:0, translateX:100},
-	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:3, type:'tween'}}
+	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:2, type:'tween'}}
 
 }
 
