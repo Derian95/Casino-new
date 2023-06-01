@@ -8,12 +8,12 @@ export const Navbar = () => {
 	// const initial = useTransform(scrollYProgress, (x) => x +0.9 )
 
 	return (
-		<nav className='w-full h-24 bg-white fixed z-20 border-b-[1px] px-5'>
+		<nav className='w-full h-20 bg-white fixed z-20 border-b-[1px] px-5'>
 			<div className="w-full h-full flex justify-center">
 			<div className='w-full max-w-7xl h-full flex items-center justify-between  relative  '>
 				<div >
 					{/* <p className='text-2xl font-bold'>DAMASCO</p> */}
-					<img src={logo} alt="" className="h-full " />
+					<img src={logo} alt="" className=" h-14 lg:h-16 " />
 				</div>
 				<div className='sm:flex gap-x-5 justify-around items-center hidden'>
 					

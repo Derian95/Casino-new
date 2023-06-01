@@ -14,8 +14,8 @@ export const Advertisement = () => {
 	return (
 		<div className='min-w-screen h-auto py-20  mt-20 md:mb-0 bg-[#F5FAFF] flex flex-col gap-10 justify-center items-center  ' id='anun'>
 			<div className='flex justify-center items-center flex-col'>
-			<p className='text-[#094998] font-medium text-sm mb-20'>ANUNCIOS</p>
-			<p className='font-bold text-[#313131] text-[44px] pb-5 mb-10 text-center'>
+			<p className='text-[#094998] font-medium text-sm mb-10'>ANUNCIOS</p>
+			<p className='font-bold text-[#313131] text-3xl md:text-4xl xl:text-5xl  text-center mb-10'>
 				Ofertas destacadas
 			</p>
 			</div>

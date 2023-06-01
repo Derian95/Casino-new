@@ -9,7 +9,7 @@ export const NavBarMobile = () => {
 		<div
 			className={`fixed ${
 				showMenu ? 'translate-x-0' : 'translate-x-full'
-			} transition-transform duration-500 ease-in  w-screen h-[calc(100vh-6rem)] mt-24 bg-white z-40 `}>
+			} transition-transform duration-500 ease-in  w-screen h-[calc(100vh-5rem)] mt-20 bg-white z-40 `}>
 			<div className='h-full w-24 bg-[#094998] absolute right-0 '>
 				<p className=' cursor-vertical-text '></p>
 			</div>

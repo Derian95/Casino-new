@@ -22,7 +22,7 @@ export const ListAdvertisemen = () => {
 
         {
           data.map(evet =>(
-            <Card key={evet.imagen} title={evet.titulo}  image={evet.imagen} type={"EVENTO"}/>
+            <Card key={evet.titulo} title={evet.titulo}  image={evet.imagen} type={"EVENTO"}/>
           ))
         }
     </div>

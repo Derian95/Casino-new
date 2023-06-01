@@ -6,7 +6,10 @@ background: linear-gradient(0deg, rgba(0,136,255,1) -100%, rgba(30,44,171,1) 200
 
 .aboutImage{
 position:relative;
-
+display:flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
 }
 .aboutImage img{
 z-index:2;
@@ -15,14 +18,14 @@ border-radius:10px;
 }
 .aboutImage::after{
     content: '';
-	height: 110%;
-	width: 70%;
-    left:0;
+	height: 100%;
+	width: 85%;
 	background-color: #0A47C9;
 	position: absolute;
 	z-index: 1;
 	transition: all 0.6s ease;
     border-radius:10px;
+	transform: translateX(-35px);
 }
 
 

@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import video from '../../assets/video.mp4'
 import { useEffect, useRef, useState } from 'react'
 import ReactTypingEffect from 'react-typing-effect'
@@ -24,7 +24,7 @@ export const Home = () => {
 
 	return (
 		<div
-			className='min-w-screen h-screen  relative '
+			className='min-w-screen  h-[80vh] md:h-screen  relative '
 			ref={containerRef}
 			id='home'>
 			

@@ -4,6 +4,7 @@ import 'react-slideshow-image/dist/styles.css'
 import image from '../../assets/logoDamasco.svg'
 import '../Views.css'
 import { Variants, motion } from 'framer-motion'
+import { variantsTitle } from '../../utils/variantsTitles'
 
 
 const variants:Variants={
@@ -30,10 +31,13 @@ export const Hall = () => {
     console.log(transition)
 	return (
 		<div className='w-screen h-auto flex flex-col justify-center items-center py-28 bg-white'>
-			<p className='text-[#094998] font-medium text-sm mb-5'>Salas</p>
-            <p className='font-extrabold text-[#313131] text-4xl mb-20'>Nuestras salas</p>
+			<motion.div className='text-center  mb-20'  variants={variantsTitle} initial="initial" whileInView="show" viewport={{once:true}}>
+			<p className='text-[#094998] font-medium text-sm mb-5'>SALAS</p>
+            <p className='font-bold text-[#313131] text-3xl md:text-4xl xl:text-5xl'>Nuestras salas</p>
+			</motion.div>
 			
-            <motion.div  variants={variants} initial="initial" whileInView="show" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='w-full'>
+			
+            <motion.div  variants={variants} initial="initial" viewport={{once:true}} whileInView="show" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='w-full'>
 				<Slide slidesToShow={5} duration={0} arrows={false} transitionDuration={transition} indicators={true} autoplay={!isPaused} cssClass='halls' >
 					<div  className=' w-50 mx-5 '>
 						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
