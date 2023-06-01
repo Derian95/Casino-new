@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+
 import video from '../../assets/video.mp4'
 import { useEffect, useRef, useState } from 'react'
 import ReactTypingEffect from 'react-typing-effect'

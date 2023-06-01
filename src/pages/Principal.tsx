@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react"
-import { About, Advertisement, Contact, Home } from "../views"
+import { About, Advertisement, Home } from "../views"
 import { Club } from "../views/principal/Club"
 import { Employed } from "../views/principal/Employed"
 import { Hall } from "../views/principal/Hall"
