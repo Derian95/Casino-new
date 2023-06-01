@@ -1,4 +1,3 @@
-import React from 'react'
 import imgAbout from '../../assets/aboutImg.svg'
 import { Variants, motion } from 'framer-motion'
 
