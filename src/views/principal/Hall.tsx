@@ -9,7 +9,7 @@ import { variantsTitle } from '../../utils/variantsTitles'
 
 const variants:Variants={
 	initial:{opacity:0, translateY:100},
-	show:{opacity:1, translateY:0,transition:{ease:'easeOut', duration:2, type:'tween'}}
+	show:{opacity:1, translateY:0,transition:{ease:'easeOut', duration:1.5, type:'tween'}}
 
 }
 

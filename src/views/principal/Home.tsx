@@ -50,9 +50,10 @@ export const Home = () => {
 
 			<div className='h-full w-full aboslute flex justify-center items-center  bg-gradient-to-r from-slate-900 to-transparent  px-5'>
 				<div className='py-5 flex flex-col gap-y-8  w-full max-w-7xl'>
-					<h1 className='text-4xl sm:text-6xl md:text-8xl  font-black text-white '>
+					<motion.h1 initial={{opacity:0, translateX:100}} whileInView={{opacity:1, translateX:0}} viewport={{once:true}} transition={{duration:1.5}} className='text-4xl sm:text-6xl md:text-8xl  font-black text-white '>
 						GLADCON
-					</h1>
+					</motion.h1>
+					<motion.div initial={{opacity:0, translateX:100}} whileInView={{opacity:1, translateX:0}} viewport={{once:true}} transition={{duration:1.5, delay:.5}}>
 					<ReactTypingEffect
 						// speed={10}
 						// eraseSpeed={1}
@@ -61,14 +62,17 @@ export const Home = () => {
 						className='text-white text-3xl font-semibold'
 						displayTextRenderer={(text) => <p className=' '>{text}</p>}
 					/>
-					<p className='text-[#F8F6F5] font-light'>
+					</motion.div >
+					
+					<motion.p initial={{opacity:0, translateX:100}} whileInView={{opacity:1, translateX:0}} viewport={{once:true}} transition={{duration:1.5,delay:1}} className='text-[#F8F6F5] font-light'>
 						Avenida San Martín 597, Tacna, Peru
-					</p>
-					<a
+					</motion.p>
+					<motion.a
+					initial={{opacity:0, translateX:100}} whileInView={{opacity:1, translateX:0}} viewport={{once:true}} transition={{duration:1.5, delay:1.5}}
 						href='#about'
 						className=' text-white p-2 w-44 px-5 rounded-md flex flex-grow items-center justify-center buttonHome'>
 						<span>Empezar</span>
-					</a>
+					</motion.a>
 				</div>
 			</div>
 		</div>

@@ -4,12 +4,12 @@ import '../Views.css'
 import {variantsTitle} from '../../utils/variantsTitles'
 const variants:Variants={
 	initial:{opacity:0, translateX:-100},
-	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:2, type:'tween',delay:1}}
+	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:1.5, type:'tween'}}
 
 }
 const variants2:Variants={
 	initial:{opacity:0, translateX:100},
-	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:2, type:'tween',delay:1.5}}
+	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:1.5, type:'tween',delay:.5}}
 
 }
 

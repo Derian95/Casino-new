@@ -1,4 +1,5 @@
 // import { useEffect, useState } from "react"
+import { Loader } from "../components/ui/Loader"
 import { About, Advertisement, Home } from "../views"
 import { Club } from "../views/principal/Club"
 import { Employed } from "../views/principal/Employed"
@@ -23,7 +24,6 @@ export const Principal = () => {
     
 	return (
 		<>
-			
 			<Home />
            
 			<div className="bg-white">
