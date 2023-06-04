@@ -11,20 +11,23 @@ export const Advertisement = () => {
 
 
 	return (
-		<div className='min-w-screen h-auto py-20  mt-20 md:mb-0 bg-[#F5FAFF] flex flex-col gap-10 justify-center items-center  ' id='anun'>
+		<div className='ra min-w-screen h-auto py-36  mt-20 md:mb-0 bg-red-900 flex flex-col gap-10 justify-center items-center  ' id='anun'>
 			<div className='flex justify-center items-center flex-col'>
-			<p className='text-[#094998] font-medium text-sm mb-10'>ANUNCIOS</p>
-			<p className='font-bold text-[#313131] text-3xl md:text-4xl xl:text-5xl  text-center mb-10'>
-				Ofertas destacadas
-			</p>
+			
+			<span className='text-[#FF0C0C] font-normal mb-10'>ANUNCIOS</span>
+			<h2 className='text-[38px] text-[#212529] font-bold  max-w-lg mb-10'>
+				Los mejores <span className='text-[#FF0C0C] '>eventos</span>
+				</h2>
+
 			</div>
 			<div className='max-w-7xl  w-full px-5'>
 			
 				<ListAdvertisemen />
 			</div>
-			<Link to={'anuncios'} className='text-white p-2 w-44 px-5 rounded-md flex items-center justify-center buttonHome'>
+			<Link to={'anuncios'}className='shadow-lg shadow-orange-200  bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-8 py-3  text-white rounded-[45px] text-md'>
 				Ver todos {' >'}
 			</Link>
+			
 		</div>
 	)
 }

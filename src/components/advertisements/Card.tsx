@@ -35,7 +35,7 @@ export const Card: FC<Props> = ({ title, image, type }) => {
 				<div className='px-5 py-2 pb-4 flex flex-col gap-8'>
 				
 				<div className='flex  justify-between '>
-				<span className='text-[10px] font-semibold rounded-lg bg-[#97faffcb] text-[#31B7BD] max-w-fit px-2 py-1'>
+				<span className='text-[10px] font-semibold rounded-md bg-[#0DFF5120] text-[#0DFF51] max-w-fit px-2 py-1'>
 					{type}
 				</span>
 				<p className='text-xs text-[#556987]'>19 Dic - 27 Ene</p>
@@ -45,9 +45,10 @@ export const Card: FC<Props> = ({ title, image, type }) => {
 				
 				
 				<div className='flex justify-end'>
-					<button className='bg-[#D3E7FF] text-[#094998] rounded-lg px-8 py-3 font-semibold'>Ver mas {'->'}</button>
+					<button className='bg-[#FF0C0C20] text-[#FF0C0C] rounded-[45px] px-4 py-2 font-medium text-sm'>Ver mas {'->'}</button>
+					
 				</div>
-
+				
 				</div>
 			</motion.div>
 		</Link>

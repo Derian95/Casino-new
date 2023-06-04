@@ -3,11 +3,11 @@ import image2 from '../../assets/Phone.svg'
 
 export const Footer = () => {
 	return (
-		<div className='min-w-screen min-h-[50vh] bg-[#094998] flex justify-center items-center py-20'>
+		<div className='min-w-screen min-h-[50vh] bg-gradient-to-b from-[#FF720C] to-[#FF0C0C] flex justify-center items-center py-20'>
 			<div className='max-w-7xl w-full  text-white h-full flex justify-center px-5'>
 				<div className='grid grid-cols-1  gap-6 sm:grid-cols-2 md:grid-cols-3  '>
 					<div>
-						<p className='text-3xl mb-6'>DAMASCO</p>
+						<p className='text-3xl mb-6 font-bold'>GLADCON</p>
 						<p className='text-[#E3E3E3] font-extralight'>
 							Ubiquenos en al calle Av. Siempre viva Sprinfitd
 						</p>

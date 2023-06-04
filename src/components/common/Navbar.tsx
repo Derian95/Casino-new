@@ -21,7 +21,7 @@ export const Navbar = () => {
 	return (
 		<nav className='w-full h-20 bg-white fixed z-20 border-b-[1px] px-5'>
 			<div className='w-full h-full flex justify-center'>
-				<div className='w-full max-w-7xl h-full flex items-center justify-between  relative  '>
+				<div className='w-full max-w-7xl h-full flex items-center  justify-between  relative  '>
 					<div>
 						{/* <p className='text-2xl font-bold'>DAMASCO</p> */}
 						<img src={logo} alt='' className=' h-14 lg:h-16 ' />
@@ -38,7 +38,7 @@ export const Navbar = () => {
 							>
 							<NavLink
 								className={({ isActive }) =>
-									`${isActive ? '' : ''} text-[#20407B] navLink `
+									`${isActive ? '' : ''} text-[#454545] navLink `
 								}
 								to={'/'}>
 								Inicio
@@ -51,7 +51,7 @@ export const Navbar = () => {
 							>
 							<NavLink
 								className={({ isActive }) =>
-									`${isActive ? '' : ''} text-[#20407B] navLink `
+									`${isActive ? '' : ''} text-[#454545] navLink `
 								}
 								to={'/'}>
 								Conócenos
@@ -64,7 +64,7 @@ export const Navbar = () => {
 							>
 						<NavLink
 							className={({ isActive }) =>
-								`${isActive ? '' : ''} text-[#20407B] navLink `
+								`${isActive ? '' : ''} text-[#454545] navLink `
 							}
 							to={'/'}>
 							Novedades
@@ -77,14 +77,15 @@ export const Navbar = () => {
 							>
 						<NavLink
 							className={({ isActive }) =>
-								`${isActive ? '' : ''} text-[#20407B] navLink `
+								`${isActive ? '' : ''} text-[#454545] navLink `
 							}
 							to={'/'}>
 							Juego responsable
 						</NavLink>
 						</motion.div>
-						<HamburguerUi />
 					</motion.div>
+					<HamburguerUi />
+
 				</div>
 			</div>
 		</nav>

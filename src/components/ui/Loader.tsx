@@ -15,8 +15,9 @@ export const Loader = () => {
 
     //     </motion.div>
     // </motion.div>
-    <motion.div initial={{opacity:1}} animate={{opacity:0,zIndex:-10}} transition={{delay:10, duration:2}} className='bg-orange-500 text-white absolute z-50 w-full h-full flex items-center justify-center '>
-        <CountUp end={100} duration={15} className='font-bold text-8xl' /> <span className='font-bold text-7xl ml-1'>  %</span>
+    <motion.div initial={{opacity:1}} animate={{ opacity:0, width:0}} transition={{delay:10, duration:1,type:'tween'}} className='bg-orange-500 overflow-hidden text-white absolute z-50 w-full h-full flex items-center justify-center '>
+        <div></div>
+        <CountUp end={100} duration={12} className='font-bold text-8xl' /> <span className='font-bold text-7xl ml-1'>  %</span>
     </motion.div>
   )
 }
