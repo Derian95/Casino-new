@@ -8,7 +8,7 @@ import { Loader } from '../components/ui/Loader'
 export const PrincipalLayout = () => {
 	
 	return (
-		<div >
+		<div className='relative'>
 			<Loader/>
 
 			<header>
