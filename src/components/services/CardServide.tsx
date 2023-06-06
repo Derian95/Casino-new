@@ -2,8 +2,8 @@ import { Variants, motion } from 'framer-motion'
 import image from '../../assets/icon.svg'
 
 const itemB:Variants = {
-    hidden: { scale: 0, top: 200 },
-    show: { scale: 1, top: 80 },
+    hidden: { opacity: 0, translateY: 50 },
+    show: { opacity: 1, translateY: 0 },
 }
 
 

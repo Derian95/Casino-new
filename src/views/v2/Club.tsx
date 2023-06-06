@@ -1,36 +1,70 @@
-
+import { motion } from 'framer-motion'
 import imgAbout from '../../assets/aboutImg.svg'
+import { variantsText } from '../../utils/variants'
 
 export const Club = () => {
-   
-  return (
-    <div  className='w-full  '>
-   
-    <div className='w-full h-fit flex flex-col items-center  -translate-y-1 gap-20 py-36'>
-        <div className='max-w-6xl flex gap-24'>
-            <img src={imgAbout} alt=''  className='h-[70vh] w-3/6 object-cover'/>
-            <div >
-                <div className='flex flex-col gap-5 justify-center'>
-                    <div>
-                    <span className='text-[#FF0C0C] font-normal'>CLUB</span>
-                <h2 className='text-[38px] text-[#212529] font-bold '>
-                    Los <span className='text-[#FF0C0C] '>mejores beneficios</span> club/socios
-                </h2>
-                    </div>
-              
-                <p className='text-sm text-[#242732] font-normal max-w-md leading-7'>
-                Que los clientes logren la mejor experiencia de entretenimiento. Brindar a nuestros colaboradores un medio para su desarrollo y bienestar. Incrementar el valor de la Corporación.Que los clientes logren la mejor experiencia de entretenimiento. Brindar a nuestros colaboradores un medio para su desarrollo y bienestar. Incrementar el valor de la Corporación.Que los clientes logren la mejor experiencia de entretenimiento. Brindar a nuestros colaboradores un medio para su desarrollo y bienestar. Incrementar el valor de la.
-                </p>
-                <hr />
-                <button className='shadow-lg shadow-orange-200 max-w-fit bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-10 py-3 text-white rounded-[45px] text-sm'>
-						Ver beneficios
-					</button>
-                </div>
-              
-            
-            </div>
-        </div>
-   </div>
-</div>
-  )
-};
+	return (
+		<div className='w-full py-36  '>
+			<div className='w-full h-fit   flex flex-col  items-center   -translate-y-1 gap-20 py-0 '>
+				<div className='max-w-6xl grid grid-cols-1 lg:grid-cols-2  gap-10 lg:gap-20 items-center w-full justify-center px-2'>
+                <motion.div
+						className='h-auto md:h-[60vh] w-full   flex items-center justify-center order-2  '
+						variants={variantsText}
+						initial='initial'
+						whileInView='show'
+						transition={{ duration: 0.5, type: 'tween', delay: 0.5 }}>
+						<div className='img-form'>
+							<img
+								src={imgAbout}
+								alt=''
+								className='h-full img-form2 w-full object-cover z-10 absolute'
+							/>
+						</div>
+					</motion.div>
+					<div>
+						<div className='flex flex-col gap-5 items-center lg:items-start justify-center'>
+							<div>
+								<motion.h3
+									variants={variantsText}
+									initial='initial'
+									whileInView='show'
+									transition={{ duration: 0.5, type: 'tween' }}
+									className='text-[#FF0C0C] font-normal text-center lg:text-left'>
+									CLUB
+								</motion.h3>
+								<motion.h2
+									variants={variantsText}
+									initial='initial'
+									whileInView='show'
+									transition={{ duration: 0.5, delay: 0.2, type: 'tween' }}
+									className='text-[38px] text-[#212529] font-bold text-center lg:text-left'>
+									Los{' '}
+									<span className='text-[#FF0C0C] '>mejores beneficios</span>{' '}
+									club/socios
+								</motion.h2>
+							</div>
+
+							<motion.p
+								variants={variantsText}
+								initial='initial'
+								whileInView='show'
+								transition={{ duration: 0.5, delay: 0.4, type: 'tween' }}
+								className='text-sm text-[#242732] font-normal max-w-md leading-7 text-center lg:text-left'>
+								Que los clientes logren
+							</motion.p>
+							<hr />
+							<motion.button
+								variants={variantsText}
+								initial='initial'
+								whileInView='show'
+								transition={{ duration: 0.5, delay: 0.6, type: 'tween' }}
+								className='shadow-lg shadow-orange-200 max-w-fit bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-10 py-3 text-white rounded-[45px] text-sm '>
+								Ver beneficios
+							</motion.button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+}

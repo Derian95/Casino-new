@@ -15,7 +15,7 @@ export const Advertisement = () => {
 			<div className='flex justify-center items-center flex-col'>
 			
 			<span className='text-[#FF0C0C] font-normal mb-10'>ANUNCIOS</span>
-			<h2 className='text-[38px] text-[#212529] font-bold  max-w-lg mb-10'>
+			<h2 className='text-[38px] text-[#212529] font-bold  max-w-lg mb-10 text-center'>
 				Los mejores <span className='text-[#FF0C0C] '>eventos</span>
 				</h2>
 

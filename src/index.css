@@ -11,7 +11,7 @@
 
 }
 
-h2, span{
+h2, span, h3{
 	/*font-family: 'Montserrat', sans-serif;*/
 	font-family: 'Oswald', sans-serif;
 }
@@ -166,18 +166,56 @@ transition: all .5s ease-in-out;
 -webkit-box-shadow: 5px -1px 57px 20px rgba(255,114,12,0.3);
 -moz-box-shadow: 5px -1px 57px 20px rgba(255,114,12,0.3);
 }
-
-
-.img-form, .img-form2{
-	border-radius: 58% 39% 11% 84% / 60% 71% 27% 37%;
+.img-form2{
+	border-radius: 44% 56% 30% 70% / 57% 79% 21% 43% ;
 	position:relative;
 	background-color:none;
+	width:100%;
+	height:450px;
+
+}
+
+.img-form{
+	border-radius: 44% 56% 30% 70% / 57% 79% 21% 43% ;
+	position:relative;
+	background-color:none;
+	width:85%;
+	height:450px;
 
 	}
 
+	@media (max-width: 1024px) {
+		.img-form{
+			width:60%;
+			height:auto;
+			}
+			.img-form2{
+			height:auto;
+			}
+	  }
+
+	  @media (max-width: 700px) {
+		.img-form{
+			width:80%;
+			height:auto;
+			}
+			.img-form2{
+			height:auto;
+			}
+	  }
+	  @media (max-width: 400px) {
+		.img-form{
+			width:90%;
+			height:auto;
+			}
+			.img-form2{
+			height:auto;
+			}
+	  }
+
 	.img-form::after{
-	border-radius: 58% 39% 11% 84% / 60% 71% 27% 37%;
 	transform:rotate(-14deg);
+	border-radius:  44% 56% 30% 70% / 57% 79% 21% 43%;
 	content:'';
 	width:100%;
 	height:100%;
@@ -185,9 +223,24 @@ transition: all .5s ease-in-out;
 	position:absolute;
 	z-index:7;
 	top:10px;
+	/* animation: morph 8s ease-in-out infinite; */
 	}
 
 
+	@keyframes morph {
+		0% {
+				  border-radius:  44% 56% 30% 70% / 57% 79% 21% 43%;
+		  } 
+		  
+		  50% {
+				  border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+		  }
+		
+		  100% {
+			border-radius:  44% 56% 30% 70% / 57% 79% 21% 43%;
+		  } 
+	  }
+	  
 
 .ra{
 	background-image: radial-gradient(#bebebe 1px, transparent 1px);

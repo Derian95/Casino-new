@@ -1,4 +1,6 @@
 // import { useEffect, useState } from "react"
+import { useEffect } from 'react'
+import { useCorporationData } from '../hooks/useDataCorporate'
 import { Advertisement } from '../views'
 import { Hall } from '../views/principal/Hall'
 import { Promotion } from '../views/principal/Promotion'
@@ -7,6 +9,7 @@ import { Club } from '../views/v2/Club'
 import { Employed } from '../views/v2/Employed'
 import { Home } from '../views/v2/Home'
 import { Services } from '../views/v2/Services'
+import { VideoBackground } from '../views/v2/VideoBackground'
 
 export const Principal = () => {
 	// const [mobile, setMobile] = useState(false)
@@ -21,11 +24,16 @@ export const Principal = () => {
 
 	//     }
 	// }, [])
+	const {data} = useCorporationData()
+	
+	useEffect(() => {
+	console.log(data)
+	}, [])
 	
 	return (
-		<>
+		<div >
 			<Home />
-
+				<VideoBackground/>
 			<div className='bg-white'>
 				<About />
 					<Hall />
@@ -38,6 +46,6 @@ export const Principal = () => {
 				<Promotion />
 				{/* <Contact/> */}
 			</div>
-		</>
+		</div>
 	)
 }

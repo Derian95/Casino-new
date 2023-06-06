@@ -33,7 +33,6 @@ export const Services = () => {
 			<motion.div
 				variants={container}
 				initial='hidden'
-				viewport={{ once: true }}
 				whileInView='show'
 				transition={{delay:1}}
 				className='max-w-7xl h-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 gap-16'>
