@@ -1,10 +1,15 @@
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import { Arrow } from './Arrow'
+
+import imagen1 from '../../assets/screen2.png'
+import imagen2 from '../../assets/screen1.png'
+import imagen3 from '../../assets/casino1.jpg'
 const images = [
-	'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-	'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-	'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+
+imagen1,
+imagen2,
+imagen3
 ]
 
 export const Slider = () => {

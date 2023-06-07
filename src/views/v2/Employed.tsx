@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import employe from '../../assets/employ.svg'
+import employe from '../../assets/newEmploy.svg'
 import { variantsText } from '../../utils/variants';
 export const Employed = () => {
   return (

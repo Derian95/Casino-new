@@ -1,16 +1,18 @@
 import { Card } from "./Card"
 
+import imagen2 from '../../assets/screen1.png'
+import imagen1 from '../../assets/screen2.png'
 
 const data=[
   {
     titulo:'Premios a mil',
     descripcion:'Sorteamos más de S/120,000 soles en Premios. 🤩 Además, puedes disfrutar de cortesías, cócteles deliciosos, diversión y las mejores máquinas del país.',
-    imagen:'https://images.pexels.com/photos/2422293/pexels-photo-2422293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    imagen:imagen2
   },
   {
     titulo:'Con todo en marzo en damasco',
     descripcion:'Sorteamos más de S/110,000 soles en Premios. 🤩 Además, puedes disfrutar de cortesías, cócteles deliciosos, diversión y las mejores máquinas del país. ¡Te esperamos! 🙌',
-    imagen:'https://images.pexels.com/photos/2422293/pexels-photo-2422293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    imagen:imagen1
   },
   
 ]

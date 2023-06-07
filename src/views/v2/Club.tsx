@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import imgAbout from '../../assets/aboutImg.svg'
+import imgAbout from '../../assets/image 94.svg'
 import { variantsText } from '../../utils/variants'
 
 export const Club = () => {

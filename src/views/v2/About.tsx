@@ -4,7 +4,8 @@ import { variantsText } from '../../utils/variants'
 // import { useState } from 'react'
 import 'react-loading-skeleton/dist/skeleton.css'
 // import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import image from '../../assets/about1.jpg'
+import image from '../../assets/aboutImg.svg'
+
 export const About = () => {
 	// const { dataCorporate } = useCorporateStore()
 	// const [imageLoaded, setImageLoaded] = useState(false)
