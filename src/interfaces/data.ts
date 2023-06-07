@@ -22,11 +22,7 @@ export interface CorporationData{
         description:    string
         imageUri:       string
       }
-    casinos: {
-        name:           string
-        logoUri:        string
-        url:            string
-      }
+    casinos:            Casino[]
     services: {
         name:           string
         icon:           string
@@ -61,4 +57,9 @@ export interface Annoucement{
     
 }
 
+export interface Casino{
+    name:           string
+    logoUri:        string
+    url:            string
+}
 

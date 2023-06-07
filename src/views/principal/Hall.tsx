@@ -5,6 +5,7 @@ import image from '../../assets/logoDamasco.svg'
 import '../Views.css'
 import { Variants, motion } from 'framer-motion'
 import { variantsText } from '../../utils/variants'
+// import { useCorporateStore } from '../../store/CorporateStore'
 
 const variants: Variants = {
 	initial: { opacity: 0 },
@@ -15,6 +16,7 @@ const variants: Variants = {
 }
 
 export const Hall = () => {
+	// const { dataCorporate } = useCorporateStore()
 	const [isPaused, setIsPaused] = useState(false)
 	const [transition, setTransition] = useState(2900)
 
@@ -27,8 +29,6 @@ export const Hall = () => {
 		setIsPaused(false)
 		setTransition(1900)
 	}
-	console.log(isPaused)
-	console.log(transition)
 	return (
 		<div className='ra w-screen h-auto flex flex-col justify-start items-center  pt-16 pb-28'>
 			<motion.div
@@ -61,22 +61,40 @@ export const Hall = () => {
 					indicators={true}
 					autoplay={!isPaused}
 					cssClass='halls'>
+						{/*
+							dataCorporate?.casinos.map(casino =>(
+								<div key={casino.name} className=' w-50 mx-5 '>
+									<img src={casino.logoUri} alt='Imagen 1' className=' mix-blend-luminosity' />
+								</div>
+							))
+							*/
+						}
+					
 					<div className=' w-50 mx-5 '>
 						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
 					</div>
-					<div className=' w-50 mx-5'>
-						<img src={image} alt='Imagen 2' />
+					<div className=' w-50 mx-5 '>
+						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
 					</div>
-					{/* ... Agrega las imágenes restantes aquí */}
-					<div className='w-50 mx-5'>
-						<img src={image} alt='Imagen 10' />
+					<div className=' w-50 mx-5 '>
+						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
 					</div>
-					<div className='w-50 mx-5'>
-						<img src={image} alt='Imagen 10' />
+					<div className=' w-50 mx-5 '>
+						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
 					</div>
-					<div className='w-50 mx-5'>
-						<img src={image} alt='Imagen 10' />
+					<div className=' w-50 mx-5 '>
+						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
 					</div>
+					<div className=' w-50 mx-5 '>
+						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
+					</div>
+					<div className=' w-50 mx-5 '>
+						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
+					</div>
+					<div className=' w-50 mx-5 '>
+						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
+					</div>
+
 				</Slide>
 			</motion.div>
 		</div>

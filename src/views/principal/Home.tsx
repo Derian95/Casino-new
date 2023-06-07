@@ -36,11 +36,11 @@ export const Home = () => {
 					muted
 					playsInline
 					onLoad={() => {
-						console.log('estoy listo')
+						//console.log('estoy listo')
 					}}
 					onLoadedData={onLoadVideo}
 					onLoadStart={() => {
-						console.log('estoy cargandome')
+						//console.log('estoy cargandome')
 					}}
 					className='h-screen w-screen object-cover  -z-10 absolute'>
 					<source src={video} type='video/mp4' />

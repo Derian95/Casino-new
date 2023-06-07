@@ -2,6 +2,7 @@ import { motion, Variants } from 'framer-motion'
 import imgAbout from '../../assets/aboutImg.svg'
 import '../Views.css'
 import {variantsTitle} from '../../utils/variantsTitles'
+
 const variants:Variants={
 	initial:{opacity:0, translateX:-100},
 	show:{opacity:1, translateX:0,transition:{ease:'easeOut', duration:1.5, type:'tween'}}
@@ -14,6 +15,7 @@ const variants2:Variants={
 }
 
 export const About = () => {
+	
 	return (
 		<div
 			className='w-screen h-auto flex flex-col justify-center items-center py-28 bg-[#F5FAFF]'
@@ -22,8 +24,10 @@ export const About = () => {
 			<div className='max-w-7xl h-auto w-full grid grid-cols-1 lg:grid-cols-2 px-5 gap-4'>
 				
 				<motion.div variants={variants} viewport={{once:true}} initial="initial" whileInView="show" className=' h-full w-full  flex justify-center items-center order-2 '>
-					<div className=' min-w-[280px] w-3/6 lg:w-5/6 aboutImage'>
-						<img src={imgAbout} alt='' className=' h-full w-full object-cover'/>
+					<div className=' min-w-[280px] w-3/6 lg:w-5/6 aboutImage relative'>
+					<div className='absolute bg-red-300 w-full h-full z-30'></div>
+
+						<img src={imgAbout} alt='' className=' h-full w-full object-cover' />
 					</div>
 				</motion.div>
 

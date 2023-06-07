@@ -1,9 +1,14 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-import { useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { variantsText } from '../../utils/variants';
 
-export const Home = () => {
+
+interface Props{
+	animation:		boolean
+}
+
+export const Home: FC<Props> = ({ animation }) => {
 	const targetRef = useRef<HTMLDivElement | null>(null);
 	const { scrollYProgress } = useScroll({
 	  target: targetRef,
@@ -37,7 +42,8 @@ export const Home = () => {
 				variants={variantsText}
 				initial='initial'
 				whileInView='show'
-				transition={{ duration: 0.5,type: 'tween',delay:10.5 }}
+				viewport={{once:true}}
+				transition={{ duration: 0.5,type: 'tween',delay:animation?10.5:0 }}
 				className='max-w-3xl px-1 text-3xl md:text-5xl text-center font-semibold text-[#212529] md:leading-[60px] leading-10'>
 					Gladcon: Líderes en Juego y Entretenimiento con 30 años de Experiencia
 				</motion.p>
@@ -45,7 +51,7 @@ export const Home = () => {
 					variants={variantsText}
 					initial='initial'
 					whileInView='show'
-					transition={{ duration: 0.5,type: 'tween',delay:10.7 }}
+					transition={{ duration: 0.5,type: 'tween',delay:animation?10.7:.2 }}
 				className='max-w-lg px-4 md:p-0 text-[#999999] tracking-normal text-center font-normal text-sm md:text-base leading-7'>
 					Descubre la emoción, la diversión y las mejores experiencias en
 					nuestros casinos de clase mundial
@@ -54,7 +60,7 @@ export const Home = () => {
 					variants={variantsText}
 					initial='initial'
 					whileInView='show'
-					transition={{ duration: 0.5,type: 'tween',delay:10.9 }}
+					transition={{ duration: 0.5,type: 'tween',delay:animation?10.9:0.4 }}
 				className='flex flex-col md:flex-row md:gap-14 gap-4 mb-14'>
 					<button className='shadow-lg shadow-orange-200 bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-6 py-4 text-white rounded-[45px] text-sm'>
 						Conoce nuestros casinos

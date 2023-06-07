@@ -6,7 +6,7 @@ import { corporateApi } from "../api/corporateApi"
 
 
 const getDataCorporate = async(): Promise<CorporationResponse> =>{
-    const { data } = await corporateApi.get<CorporationResponse>('/corporation')
+    const { data } = await corporateApi.get<CorporationResponse>('/Corporation')
     return data
 }
 

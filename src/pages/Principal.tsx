@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react"
-import { useEffect } from 'react'
-import { useCorporationData } from '../hooks/useDataCorporate'
+// import { useEffect } from 'react'
+// import { useCorporationData } from '../hooks/useDataCorporate'
 import { Advertisement } from '../views'
 import { Hall } from '../views/principal/Hall'
 import { Promotion } from '../views/principal/Promotion'
@@ -24,28 +24,29 @@ export const Principal = () => {
 
 	//     }
 	// }, [])
-	const {data} = useCorporationData()
-	
-	useEffect(() => {
-	console.log(data)
-	}, [])
-	
+	// const { data, isFetching, isLoading, isSuccess } = useCorporationData()
+
+	// useEffect(() => {
+	// 	console.log(data)
+	// }, [])
+	// console.log('isFetching')
+	// console.log(isFetching)
+	// console.log('isLoading')
+	// console.log(isSuccess)
+	// console.log(data)
+
 	return (
-		<div >
-			<Home />
-				<VideoBackground/>
-			<div className='bg-white'>
-				<About />
-					<Hall />
-					<Club />
-
-				<Services />
-				<Employed />
-
-				<Advertisement />
-				<Promotion />
-				{/* <Contact/> */}
-			</div>
+		<div>
+			<Home animation={true} />
+			<VideoBackground />
+			<About />
+			<Hall />
+			<Club />
+			<Services />
+			<Employed />
+			<Advertisement />
+			<Promotion />
+			{/* <Contact/> */}
 		</div>
 	)
 }
