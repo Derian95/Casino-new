@@ -2,17 +2,15 @@ import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import { Arrow } from './Arrow'
 
-import imagen1 from '../../assets/screen2.png'
-import imagen2 from '../../assets/screen1.png'
-import imagen3 from '../../assets/casino1.jpg'
-const images = [
+import { AnnoucementMedia } from '../../interfaces/data'
+import { FC } from 'react'
+import { ImageLoading } from '../ui/ImageLoading'
 
-imagen1,
-imagen2,
-imagen3
-]
+interface Props {
+	images: AnnoucementMedia[]
+}
 
-export const Slider = () => {
+export const Slider: FC<Props> = ({ images }) => {
 	return (
 		<Slide
 			cssClass='sliderClass'
@@ -20,28 +18,27 @@ export const Slider = () => {
 			indicators
 			prevArrow={
 				<div className='absolute bottom-[10px] left-0 text-white'>
-					<Arrow/>
+					<Arrow />
 				</div>
 			}
 			nextArrow={
 				<div className='absolute bottom-[10px] right-0 text-white rotate-180'>
-					<Arrow/>
+					<Arrow />
 				</div>
 			}>
-			<div className='w-full h-full bg-black relative'>
-				<div className='absolute bg-gradient-to-b to-slate-950/40 from-transparent h-full w-full'></div>
-				<img src={images[0]} alt='' className='h-full w-full object-cover' />
-			</div>
-			<div className='w-full h-full bg-black'>
-				<div className='absolute bg-gradient-to-b to-slate-950/40 from-transparent h-full w-full'></div>
-
-				<img src={images[2]} alt='' className='h-full w-full object-cover' />
-			</div>
-			<div className='w-full h-full bg-black'>
-				<div className='absolute bg-gradient-to-b to-slate-950/40 from-transparent h-full w-full'></div>
-
-				<img src={images[1]} alt='' className='h-full w-full object-cover' />
-			</div>
+			{images.map((image) => (
+				<div key={image.idCorpAnnouncementMedia} className='w-full h-full bg-black relative'>
+					<div className='absolute bg-gradient-to-b to-slate-950/40 from-transparent h-full w-full'></div>
+					
+					<ImageLoading src={image.pathWeb}/>
+					{/* <img
+						src={image.pathWeb}
+						alt=''
+						className='h-full w-full object-cover'
+					/> */}
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis aspernatur quam unde quos ullam aperiam dolorem aut magni. Magni, nam? Nulla earum tempora rerum deserunt maxime esse? Aperiam, voluptates at.
+				</div>
+			))}
 		</Slide>
 	)
 }

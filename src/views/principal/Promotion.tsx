@@ -1,28 +1,44 @@
 import { Link } from 'react-router-dom'
-import { ListAdvertisemen } from '../../components/advertisements/ListAdvertisemen'
 import '../Views.css'
 import { variantsText } from '../../utils/variants'
 import { motion } from 'framer-motion'
+import { ListPromotion } from '../../components/promotion/ListPromotion'
+import { useCorporateStore } from '../../store/CorporateStore'
+import { useMemo } from 'react'
 
 export const Promotion = () => {
-	return (
-		<div className='ra min-w-screen h-auto py-36 pt-20 md:mb-0 bg-[#fff7f2] flex flex-col gap-10 justify-center items-center  ' id='anun'>
-			<motion.h2
-			variants={variantsText}
-			initial='initial'
-			whileInView='show'
-			viewport={{once:true}}
-			transition={{ duration: 0.5, type: 'tween' }}
-			className='text-[38px] text-[#212529] font-bold  max-w-lg mb-10 text-center'>
-				Las mejores <span className='text-[#FF0C0C] '>promociones</span>
-				</motion.h2>
-			<div className='max-w-7xl  w-full px-5'>
+	const { dataCorporate: promotion } = useCorporateStore()
 
-				<ListAdvertisemen />
-			</div>
-			<Link to={'anuncios'}className='shadow-lg shadow-orange-200  bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-8 py-3  text-white rounded-[45px] text-md'>
-				Ver todos {' >'}
-			</Link>
-		</div>
+	const dataPromotion = useMemo(() => {
+		const data = promotion?.announcement.promotions
+		return data?.length
+	}, [promotion])
+
+	return (
+		<>
+			{dataPromotion === 0 ? null : (
+				<div
+					className='ra min-w-screen h-auto py-36 pt-20 md:mb-0 bg-[#fff7f2] flex flex-col gap-10 justify-center items-center  '
+					id='anun'>
+					<motion.h2
+						variants={variantsText}
+						initial='initial'
+						whileInView='show'
+						viewport={{ once: true }}
+						transition={{ duration: 0.5, type: 'tween' }}
+						className='text-[38px] text-[#212529] font-bold  max-w-lg mb-10 text-center'>
+						Las mejores <span className='text-[#FF0C0C] '>promociones</span>
+					</motion.h2>
+					<div className='max-w-7xl  w-full px-5 flex justify-center'>
+						<ListPromotion />
+					</div>
+					<Link
+						to={'anuncios'}
+						className='shadow-lg shadow-orange-200  bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-8 py-3  text-white rounded-[45px] text-md'>
+						Ver todos {' >'}
+					</Link>
+				</div>
+			)}
+		</>
 	)
 }

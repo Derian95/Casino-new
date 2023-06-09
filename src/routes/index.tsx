@@ -19,7 +19,7 @@ export const route = createBrowserRouter([
 			},
 			
 			{
-				path: '/anuncio-detalle',
+				path: '/anuncio-detalle/:idAnnouncement',
 				element: <DetailAnnouncement />,
 			},
             {

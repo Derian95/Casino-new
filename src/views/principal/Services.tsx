@@ -1,5 +1,5 @@
 import { Variants, motion } from 'framer-motion'
-import { CardServide } from '../../components/services/CardServide'
+// import { CardServide } from '../../components/services/CardServide'
 import { variantsTitle } from '../../utils/variantsTitles'
 
 const container: Variants = {
@@ -17,7 +17,7 @@ export const Services = () => {
 	return (
 		<div
 			className='w-screen h-auto flex flex-col justify-center items-center py-28 bg-white'
-			id='about'>
+			id='services'>
 			<motion.div
 				className='text-center  mb-20'
 				variants={variantsTitle}
@@ -36,12 +36,12 @@ export const Services = () => {
 				whileInView='show'
 				transition={{delay:1}}
 				className='max-w-7xl h-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 gap-16'>
+				{/* <CardServide />
 				<CardServide />
 				<CardServide />
 				<CardServide />
 				<CardServide />
-				<CardServide />
-				<CardServide />
+				<CardServide /> */}
 			</motion.div>
 		</div>
 	)

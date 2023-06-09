@@ -1,26 +1,27 @@
 import { motion } from 'framer-motion'
-import imgAbout from '../../assets/image 94.svg'
 import { variantsText } from '../../utils/variants'
+import { useCorporateStore } from '../../store/CorporateStore'
+import { ImageLoading } from '../../components/ui/ImageLoading'
 
 export const Club = () => {
+    const { dataCorporate:DataClub } = useCorporateStore()
 	return (
-		<div className='w-full py-36  '>
+		<div className='w-full py-36  ' id='club'>
 			<div className='w-full h-fit   flex flex-col  items-center   -translate-y-1 gap-20 py-0 px-10'>
 				<div className='max-w-6xl grid grid-cols-1 lg:grid-cols-2  gap-10 lg:gap-10 items-center w-full justify-center px-2'>
                 <motion.div
-						className='h-auto md:h-[60vh] w-full   flex items-center justify-center order-2  '
+						className='h-auto md:h-[60vh] w-full   flex items-center justify-center order-2  relative '
 						variants={variantsText}
 						initial='initial'
 						whileInView='show'
-                        viewport={{once:true}}
+						viewport={{ once: true }}
 						transition={{ duration: 0.5, type: 'tween', delay: 0.5 }}>
-						<div className='img-form'>
-							<img
-								src={imgAbout}
-								alt=''
-								className='h-full img-form2 w-full object-cover z-10 absolute'
-							/>
+
+						{/* <div className='img-form3  absolute top-0 bg-slate-700 -rotate-12'></div> */}
+						<div className='img-form relative overflow-hidden'>
+							<ImageLoading src={DataClub?.club.imageUri!} />
 						</div>
+
 					</motion.div>
 					<div>
 						<div className='flex flex-col gap-5 items-center lg:items-start justify-center'>
@@ -31,8 +32,8 @@ export const Club = () => {
 									whileInView='show'
                                     viewport={{once:true}}
 									transition={{ duration: 0.5, type: 'tween' }}
-									className='text-[#FF0C0C] font-normal text-center lg:text-left'>
-									CLUB
+									className='text-[#FF0C0C] font-normal text-center lg:text-left uppercase'>
+									{ DataClub?.club.title }
 								</motion.h3>
 								<motion.h2
 									variants={variantsText}
@@ -54,7 +55,7 @@ export const Club = () => {
                                 viewport={{once:true}}
 								transition={{ duration: 0.5, delay: 0.4, type: 'tween' }}
 								className='text-sm text-[#242732] font-normal max-w-md leading-7 text-center lg:text-left'>
-								Que los clientes logren sdsa dasd asd asd  clientes logren clientes logren clientes logren  clientes logren clientes logren clientes logrenv  clientes logrenv
+								{ DataClub?.club.description}
 							</motion.p>
 							<hr />
 							<motion.button

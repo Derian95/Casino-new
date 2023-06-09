@@ -1,22 +1,50 @@
-import { ListTotal } from "../components/advertisements/ListtTotal"
+import { useEffect, useState } from 'react'
+import { ListTotal } from '../components/advertisements/ListtTotal'
+import { useLocation } from 'react-router-dom'
+import { useCorporateStore } from '../store/CorporateStore'
 
 export const Announcement = () => {
-  return (
-    <div className="h-full w-full flex justify-center pt-40">
-        <div className="max-w-5xl  w-full h-full flex gap-4 flex-col md:flex-row px-5" >
-            <div className="w-full h-fullflex gap-2 py-10 flex-row md:flex-col md:w-64 ">
-                <p className="font-bold text-[#354154] mb-4 pl-3">CATEGORIA</p>
-                <div className="flex flex-row md:flex-col">
-                <p className="hover:bg-[#BDD2FF] hover:text-[#0A47C9] text-[#556987] py-2 px-4 cursor-pointer">Promoción</p>
-                <p className="hover:bg-[#BDD2FF] hover:text-[#0A47C9] text-[#556987] py-2 px-4 cursor-pointer">Evento</p>
-                </div>
-               
-            </div>
-            <div className="py-8 md:py-10  ">
-            <ListTotal/>
-            </div>
+	const { pathname } = useLocation()
+	const [filterAnnoucement, setFilterAnnoucement] = useState<number>(2)
+	const { dataCorporate } = useCorporateStore()
 
-        </div>
-    </div>
-  )
+	const countEvents = dataCorporate?.announcement.events.length
+	const countPromotion = dataCorporate?.announcement.promotions.length
+
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}, [pathname])
+
+	const changeFilter = (filter: number) => {
+		setFilterAnnoucement(filter)
+	}
+	return (
+		<div className='h-full w-full flex justify-center pt-40'>
+			<div className='max-w-5xl  w-full h-full flex gap-4 flex-col md:flex-row px-5 relative'>
+				<div className='w-full h-fullflex gap-2 py-10 flex-row md:flex-col md:w-64  '>
+					<p className='font-bold text-[#354154] mb-4 pl-3 '>CATEGORIA</p>
+					<div className='flex flex-row md:flex-col '>
+						<p
+							onClick={() => changeFilter(0)}
+							className={`hover:bg-[#ffb9a4] hover:text-[#ff5521] text-[#4d4d4d] py-2 px-4 cursor-pointer flex justify-between  ${filterAnnoucement==0 ?'bg-[#ffb9a4] text-[#ff5521]':'' }`}>
+							Promoción <p>{countPromotion}</p>
+						</p>
+						<p
+							onClick={() => changeFilter(1)}
+							className={`hover:bg-[#ffb9a4] hover:text-[#ff5521] text-[#4d4d4d] py-2 px-4 cursor-pointer flex justify-between  ${filterAnnoucement==1 ?'bg-[#ffb9a4] text-[#ff5521]':'' }`}>
+							Evento <p>{countEvents}</p>
+						</p>
+						<p
+							onClick={() => changeFilter(2)}
+              className={`hover:bg-[#ffb9a4] hover:text-[#ff5521] text-[#4d4d4d] py-2 px-4 cursor-pointer flex justify-between  ${filterAnnoucement==2 ?'bg-[#ffb9a4] text-[#ff5521]':'' }`}>
+							Todos
+						</p>
+					</div>
+				</div>
+				<div className='py-8 md:py-10    border-l-2'>
+					<ListTotal filterData={filterAnnoucement} />
+				</div>
+			</div>
+		</div>
+	)
 }

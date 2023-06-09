@@ -1,6 +1,7 @@
 // import { useEffect, useState } from "react"
 // import { useEffect } from 'react'
 // import { useCorporationData } from '../hooks/useDataCorporate'
+
 import { Advertisement } from '../views'
 import { Hall } from '../views/principal/Hall'
 import { Promotion } from '../views/principal/Promotion'
@@ -35,9 +36,11 @@ export const Principal = () => {
 	// console.log(isSuccess)
 	// console.log(data)
 
+
+
 	return (
 		<div>
-			<Home animation={true} />
+			<Home/>
 			<VideoBackground />
 			<About />
 			<Hall />
