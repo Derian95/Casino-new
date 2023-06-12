@@ -75,10 +75,10 @@ export const Home = () => {
 					viewport={{ once: true }}
 					transition={{ duration: 0.5, type: 'tween', delay: 5.9 }}
 					className='flex flex-col md:flex-row md:gap-14 gap-4 mb-14'>
-					<button className='shadow-lg shadow-orange-200 bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-6 py-4 text-white rounded-[45px] text-sm'>
+					<button className='shadow-lg shadow-orange-200 bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-6 py-4 text-white rounded-[45px] text-sm  hover:brightness-150 transition-all duration-300 ease-in'>
 						Conoce nuestros casinos
 					</button>
-					<button className='shadow-lg shadow-orange-100 bg-transparent border border-[#FF0C0C]  px-6 py-4 text-[#FF0C0C] rounded-[45px] text-sm'>
+					<button className='shadow-lg shadow-orange-100 bg-transparent border border-[#FF0C0C]  px-6 py-4 text-[#FF0C0C] rounded-[45px] text-sm  hover:brightness-150 transition-all duration-300 ease-in'>
 						Trabaje con nosotros
 					</button>
 				</motion.div>

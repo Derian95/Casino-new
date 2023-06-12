@@ -3,6 +3,8 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { Slider } from '../../components/detail/Slider'
 import { useAnouncementData } from '../../hooks/useAnnoucement'
 import Skeleton from 'react-loading-skeleton'
+import { formatDate } from '../../utils/date'
+import arrow from '../../assets/arrowMenu.svg'
 
 export const DetailAnnouncement = () => {
 	const { pathname } = useLocation()
@@ -16,18 +18,21 @@ export const DetailAnnouncement = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}, [pathname])
 
+	const formatStartDate= formatDate(announcement?.startDate!)
+	const formatEndDate = formatDate(announcement?.endDate!)
+
 	return (
 		<div className='w-screen h-auto flex justify-center pt-36 bg-white px-5'>
 			<div className='max-w-5xl h-auto w-full '>
 				{isSuccess ? (
 					<>
-						<div onClick={() => navigate(-1)}>
+						<div onClick={() => navigate(-1)} className='bg-[#FF0C0C20] w-fit px-4 py-2 rounded-2xl cursor-pointer group' >
 							{' '}
-							<span className='text-2xl'>{'<  '}</span> Volver
+							<span className='text-2xl flex gap-2'><img src={arrow} alt="" className='w-0 group-hover:w-4 transition-all duration-200 rotate-180'/> <p className='text-[#fc6022] text-sm'>Regresar</p></span> 
 						</div>
 
-						<p className='text-xs mb-6 text-[#0A47C9] font-semibold m-auto max-w-fit'>
-							{announcement?.startDate}
+						<p className='text-xs mb-6 text-[#556987]font-semibold m-auto max-w-fit'>
+							{formatStartDate} - {formatEndDate}
 						</p>
 						<p className='text-3xl text-center font-bold text-[#333333]'>
 							{announcement?.title}

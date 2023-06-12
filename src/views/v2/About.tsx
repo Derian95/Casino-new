@@ -12,7 +12,7 @@ export const About = () => {
 			<div className='w-full h-fit  flex flex-col  items-center   -translate-y-1 gap-20 py-0 '>
 				<div className='max-w-6xl grid grid-cols-1 lg:grid-cols-2  gap-10 lg:gap-24 items-center w-full justify-center '>
 					<motion.div
-						className='h-auto md:h-[60vh] w-full   flex items-center justify-center order-2  relative '
+						className='  h-auto md:h-[60vh] w-full   flex items-center justify-center order-2  relative '
 						variants={variantsText}
 						initial='initial'
 						whileInView='show'
@@ -20,11 +20,12 @@ export const About = () => {
 						transition={{ duration: 0.5, type: 'tween', delay: 0.5 }}>
 
 						{/* <div className='img-form3  absolute top-0 bg-slate-700 -rotate-12'></div> */}
-						<div className='img-form relative overflow-hidden'>
+						<div className='img-form relative overflow-hidden shadow-lg shadow-orange-200 '>
 							<ImageLoading src={dataCorporate?.info.imageUri!} />
 						</div>
 
 					</motion.div>
+
 					<div className='flex flex-col items-center lg:items-start gap-7 lg:order-2'>
 						<div>
 							<motion.h3
@@ -85,7 +86,7 @@ export const About = () => {
 							whileInView='show'
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, type: 'tween', delay: 0.8 }}>
-							<button className='shadow-lg shadow-orange-200 max-w-fit bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-10 py-3 text-white rounded-[45px] text-sm'>
+							<button className='shadow-lg shadow-orange-200 max-w-fit bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-10 py-3 text-white rounded-[45px] text-sm hover:brightness-150 transition-all duration-300 ease-in'>
 								Ver historia
 							</button>
 						</motion.div>

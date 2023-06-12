@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { variantsText } from '../../utils/variants'
 import { useCorporateStore } from '../../store/CorporateStore'
 import { useMemo } from 'react'
+import arrow from '../../assets/arrowWhite.svg'
 
 export const Advertisement = () => {
 	// 	const { pathname } = useLocation();
@@ -50,8 +51,8 @@ export const Advertisement = () => {
 					</div>
 					<Link
 						to={'anuncios'}
-						className='shadow-lg shadow-orange-200  bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-8 py-3  text-white rounded-[45px] text-md'>
-						Ver todos {' >'}
+						className='shadow-lg flex gap-2 shadow-orange-200  bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-8 py-3  text-white rounded-[45px] text-md hover:brightness-150 transition-all duration-300 ease-in group'>
+						Ver todos <img src={arrow} alt="" className='w-0 group-hover:w-4 transition-all duration-200 '/>
 					</Link>
 				</div>
 			)}

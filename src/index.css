@@ -319,3 +319,35 @@ background-color: #fff7f2;
     transition:all .5s cubic-bezier(.86,0,.07,1),background-color .3s;
 
  }
+
+
+
+
+
+ /*
+ *SCROLLBAR
+ */
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #8f54a0 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #dbdbdb;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgb(255,114,12);
+background: linear-gradient(180deg, rgba(255,114,12,1) 0%, rgba(255,12,12,1) 100%);
+    border-radius: 10px;
+    border: .2px solid #c0c0c0;
+  }
+

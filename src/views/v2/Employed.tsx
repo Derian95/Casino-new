@@ -19,7 +19,7 @@ export const Employed = () => {
 						whileInView='show'
 						viewport={{once:true}}
 						transition={{ duration: 0.5, delay: 0.2, type: 'tween' }}
-            className='shadow-lg shadow-orange-200 max-w-fit bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-10 py-3 text-white rounded-[45px] text-sm'>
+            className='shadow-lg shadow-orange-200 max-w-fit bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-10 py-3 text-white rounded-[45px] text-sm hover:brightness-150 transition-all duration-300 ease-in'>
 						Ver empleos
 					</motion.button>
         </div>

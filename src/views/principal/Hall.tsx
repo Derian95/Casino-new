@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import '../Views.css'
@@ -29,10 +29,14 @@ export const Hall = () => {
 		setIsPaused(false)
 		setTransition(1900)
 	}
+	useEffect(() => {
+	
+	}, [dataCorporate?.casinos.length])
 	return (
 		<>
 			{dataCorporate?.casinos.length === 0 ? null : (
-				<div className='ra w-screen h-auto flex flex-col justify-start items-center  pt-16 pb-28' id='hall'>
+				dataCorporate?.casinos ? (
+					<div className='ra w-screen h-auto flex flex-col justify-start items-center  pt-16 pb-28' id='hall'>
 					<motion.div
 						className='text-center'
 						variants={variantsText}
@@ -50,8 +54,9 @@ export const Hall = () => {
 					<motion.div
 						variants={variants}
 						initial='initial'
-						viewport={{ once: true }}
 						whileInView='show'
+						transition={{ duration: 0.5, delay: 0.4, type: 'tween' }}
+						viewport={{ once: true }}
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}
 						className='w-full mt-16 '>
@@ -63,39 +68,17 @@ export const Hall = () => {
 							indicators={true}
 							autoplay={!isPaused}
 							cssClass='halls'>
+
 							{dataCorporate?.casinos.map((casino) => (
-								<div key={casino.name} className=' w-2/4 mx-5 imageHall'>
+								<div key={casino.name} className='w-2/4 mx-5 imageHall'>
 									<ImageLoading src={casino.logoUri} />
 								</div>
 							))}
 
-							{/* <div className=' w-50 mx-5 '>
-						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
-					</div>
-					<div className=' w-50 mx-5 '>
-						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
-					</div>
-					<div className=' w-50 mx-5 '>
-						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
-					</div>
-					<div className=' w-50 mx-5 '>
-						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
-					</div>
-					<div className=' w-50 mx-5 '>
-						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
-					</div>
-					<div className=' w-50 mx-5 '>
-						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
-					</div>
-					<div className=' w-50 mx-5 '>
-						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
-					</div>
-					<div className=' w-50 mx-5 '>
-						<img src={image} alt='Imagen 1' className=' mix-blend-luminosity' />
-					</div> */}
 						</Slide>
 					</motion.div>
 				</div>
+				):null
 			)}
 		</>
 	)

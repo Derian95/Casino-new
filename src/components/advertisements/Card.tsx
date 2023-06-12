@@ -2,20 +2,29 @@
 import { Link } from 'react-router-dom'
 import { FC } from 'react'
 import { motion } from 'framer-motion'
+import { formatDate } from '../../utils/date'
+import arrow from '../../assets/arrowMenu.svg'
 
 interface Props {
-	title: 	string
-	image: 	string
-	type: 	TypeAnnouncement
-	id:		number
+	title: 			string
+	image: 			string
+	type: 			TypeAnnouncement
+	id:				number
+	startDate:		string
+	endDate:		string
 
 }
 
 type TypeAnnouncement = 'EVENTO' | 'PROMOCION'
 
-export const Card: FC<Props> = ({ title, image, type, id }) => {
+export const Card: FC<Props> = ({ title, image, type, id, startDate, endDate }) => {
 
-	
+	// const [formatStartDate, setFormatStartDate] = useState('')
+	// const [formatEndDate, setFormatEndDate] = useState('')
+
+	const formatStartDate= formatDate(startDate)
+	const formatEndDate = formatDate(endDate)
+
 	return (
 		<Link to={'/anuncio-detalle/'+id}>
 			<motion.div
@@ -37,17 +46,17 @@ export const Card: FC<Props> = ({ title, image, type, id }) => {
 				<div className='px-5 py-2 pb-4 flex flex-col gap-8'>
 				
 				<div className='flex  justify-between '>
-				<span className='text-[11px] font-semibold rounded-md bg-[#6eadff] text-[#1353a5] max-w-fit px-2 py-1'>
+				<span className='text-[11px] font-semibold rounded-md bg-[#BDD2FF] text-[#0A47C9] max-w-fit px-2 py-1'>
 					{type}
 				</span>
-				<p className='text-xs text-[#556987]'>19 Dic - 27 Ene</p>
+				<p className='text-xs text-[#556987]'>{formatStartDate} - {formatEndDate}</p>
 
 				</div>
 				<p className='text-[#354154] font-semibold text-2xl'>{title}</p>
 				
 				
 				<div className='flex justify-end'>
-					<button className='bg-[#FF0C0C20] text-[#fc6022] rounded-[45px] px-4 py-2 font-medium text-sm'>Ver mas {'->'}</button>
+					<button className='bg-[#FF0C0C20] text-[#fc6022] rounded-[45px] px-5 py-2 font-normal text-sm flex gap-2 justify-center items-center'>Ver mas <img src={arrow} className='w-0 group-hover:w-4 transition-all duration-200' alt="" /></button>
 					
 				</div>
 				

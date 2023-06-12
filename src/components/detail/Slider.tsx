@@ -36,7 +36,7 @@ export const Slider: FC<Props> = ({ images }) => {
 						alt=''
 						className='h-full w-full object-cover'
 					/> */}
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis aspernatur quam unde quos ullam aperiam dolorem aut magni. Magni, nam? Nulla earum tempora rerum deserunt maxime esse? Aperiam, voluptates at.
+					
 				</div>
 			))}
 		</Slide>

@@ -28,13 +28,13 @@ export const ListTotal:FC<Props> = ({ filterData }) => {
 
   
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2  ">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2  ">
         {/* <Card/>
         <Card/> */}
 
         {
           dataFilter?.map(evet =>(
-            <Card key={evet.idCorpAnnouncement} title={evet.title} image={evet.corpAnnouncementsMedia[0].pathWeb} type={evet.typeAnnouncement ==1 ?'EVENTO':'PROMOCION'}  id={evet.idCorpAnnouncement}/>
+            <Card key={evet.idCorpAnnouncement} title={evet.title} image={evet.corpAnnouncementsMedia[0].pathWeb} type={evet.typeAnnouncement == 1 ? 'EVENTO' : 'PROMOCION'} id={evet.idCorpAnnouncement} startDate={evet.startDate} endDate={evet.endDate}/>
           ))
         }
     </div>

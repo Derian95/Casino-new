@@ -7,7 +7,7 @@ export const Club = () => {
     const { dataCorporate:DataClub } = useCorporateStore()
 	return (
 		<div className='w-full py-36  ' id='club'>
-			<div className='w-full h-fit   flex flex-col  items-center   -translate-y-1 gap-20 py-0 px-10'>
+			<div className='w-full h-fit   flex flex-col  items-center   -translate-y-1 gap-20 py-0 '>
 				<div className='max-w-6xl grid grid-cols-1 lg:grid-cols-2  gap-10 lg:gap-10 items-center w-full justify-center px-2'>
                 <motion.div
 						className='h-auto md:h-[60vh] w-full   flex items-center justify-center order-2  relative '
@@ -18,11 +18,13 @@ export const Club = () => {
 						transition={{ duration: 0.5, type: 'tween', delay: 0.5 }}>
 
 						{/* <div className='img-form3  absolute top-0 bg-slate-700 -rotate-12'></div> */}
-						<div className='img-form relative overflow-hidden'>
+						<div className='img-form relative overflow-hidden shadow-lg shadow-orange-200 '>
 							<ImageLoading src={DataClub?.club.imageUri!} />
 						</div>
 
 					</motion.div>
+
+					
 					<div>
 						<div className='flex flex-col gap-5 items-center lg:items-start justify-center'>
 							<div>
@@ -64,7 +66,7 @@ export const Club = () => {
 								whileInView='show'
                                 viewport={{once:true}}
 								transition={{ duration: 0.5, delay: 0.6, type: 'tween' }}
-								className='shadow-lg shadow-orange-200 max-w-fit bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-10 py-3 text-white rounded-[45px] text-sm '>
+								className='shadow-lg shadow-orange-200 max-w-fit bg-gradient-to-r from-[#FF720C] to-[#FF0C0C] px-10 py-3 text-white rounded-[45px] text-sm hover:brightness-150 transition-all duration-300 ease-in'>
 								Ver beneficios
 							</motion.button>
 						</div>
