@@ -15,7 +15,7 @@ export const ListPromotion = () => {
          
           {
             slicedPromotion?.map(value =>(
-              <Card key={value.id} title={value.title} image={value.imagesUri[0]} type={"PROMOCION"} id={value.id}/>
+              <Card key={value.id} title={value.title} image={value.imagesUri[0]} type={"PROMOCION"} id={value.id} startDate={value.startDate} endDate={value.endDate}/>
             ))
           }
       </div>

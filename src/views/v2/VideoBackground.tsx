@@ -33,7 +33,7 @@ export const VideoBackground = () => {
 				<source src={video} type='video/mp4' />
 			</motion.video> */}
             <motion.div
-            className='imgShadow max-w-6xl rounded-3xl  shadow-[#f5d6bf] z-20  w-full'
+            className='imgShadow max-w-6xl rounded-3xl shadow-lg  shadow-[#f5d6bf] z-20  w-full'
             style={{ scale }}
             >
             <VideoLoading src={dataCorporate?.info.videoUri!}/>

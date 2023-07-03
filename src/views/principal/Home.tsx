@@ -19,7 +19,6 @@ export const Home = () => {
 
 	const onLoadVideo = () => {
 		setPreLoader(false)
-		console.log('ya me cargue')
 	}
 	useEffect(() => {}, [])
 

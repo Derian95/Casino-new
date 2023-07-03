@@ -3,6 +3,7 @@ import { PrincipalLayout } from "../layout";
 import { Principal } from "../pages/Principal";
 import { Announcement } from "../pages/Announcement";
 import { Contact, DetailAnnouncement } from "../views";
+import { ErrorPage } from "../pages";
 
 
 
@@ -12,6 +13,7 @@ export const route = createBrowserRouter([
 	{
 		path: '/',
 		element: <PrincipalLayout />,
+		errorElement:<ErrorPage/>,
 		children: [
 			{
 				path: '/',

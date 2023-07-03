@@ -21,6 +21,7 @@ export const PrincipalLayout = () => {
 	}, [data,isSuccess])
 	
 
+	console.log('rsa')
 	
 	return (
 		<div className='relative'>

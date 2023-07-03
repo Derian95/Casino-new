@@ -14,7 +14,6 @@ const container: Variants = {
 }
 export const Services = () => {
 	const { dataCorporate: service } = useCorporateStore()
-	console.log(service?.services)
 	return (
 		<div id='services'>
 			{service?.services.length === 0 ? null : (

@@ -18,7 +18,7 @@ export const VideoLoading: FC<Props> = ({ src }) => {
 	return (
 		<div className="w-full h-full">
 			{!videoLoaded && (
-				<div className="w-full h-[30vh] object-cover">
+				<div className="w-full h-[45vh] object-cover">
 					<Skeleton count={1} width={'100%'} height={'100%'} className="p-1" />
 				</div>
 			)}

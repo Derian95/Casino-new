@@ -12,7 +12,6 @@ export const DetailAnnouncement = () => {
 	const navigate = useNavigate()
 	const { data, isSuccess } = useAnouncementData(idAnnouncement!)
 	const announcement = data?.data
-	console.log(announcement)
 
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })

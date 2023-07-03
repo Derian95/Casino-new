@@ -26,7 +26,7 @@ export const Loader = () => {
 
 	return (
 		<motion.div
-			initial={{ opacity: 1 }}
+			initial={{ opacity: 1,width:'100%' }}
 			animate={{ opacity: 0, width: 0 }}
 			transition={{ delay: 5, duration: 1, type: 'tween' }}
 			className=' bg-gradient-to-b from-[#FF720C] to-[#FF0C0C] overflow-hidden text-white  z-50 w-screen h-screen flex items-center justify-center fixed top-0 right-0 '>
